@@ -8,9 +8,9 @@ export const typeDefs = gql`
     project(id: ID!): Project
   }
   type Mutation {
-    createClient(input: CreateUserInput!): Client!
+    addClient(input: AddClientInput!): Client!
     deleteClient(id: ID!): Client!
-    createProject(input: CreateProjectInput!): Project!
+    addProject(input: AddProjectInput!): Project!
     deleteProject(id: ID!): Project!
     updateProject(input: UpdateProjectInput!, id: ID!): Project!
   }
@@ -21,7 +21,7 @@ export const typeDefs = gql`
     phone: String!
     projects: [Project!]
   }
-  input CreateUserInput {
+  input AddClientInput {
     name: String!
     email: String!
     phone: String!
@@ -34,7 +34,7 @@ export const typeDefs = gql`
     status: String!
     client: Client!
   }
-  input CreateProjectInput {
+  input AddProjectInput {
     clientId: ID!
     name: String!
     description: String!
