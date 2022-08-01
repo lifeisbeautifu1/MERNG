@@ -1,5 +1,4 @@
 import {
-  Navbar,
   Clients,
   AddClientModal,
   AddProjectModal,
@@ -9,16 +8,13 @@ import {
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <div className="d-flex gap-3 mb-4">
-          <AddClientModal />
-          <AddProjectModal />
-        </div>
-        <Projects />
-        <hr />
-        <Clients />
+      <div className="d-flex gap-3 mb-4">
+        <AddClientModal />
+        <AddProjectModal />
       </div>
+      <Projects />
+      <hr />
+      <Clients />
     </>
   );
 };

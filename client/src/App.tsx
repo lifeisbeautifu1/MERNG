@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home, NotFound, Project } from './pages';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { SharedLayout } from './components';
 
 function App() {
   const client = new ApolloClient({
@@ -10,9 +11,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects/:id" element={<Project />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/projects/:id" element={<Project />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </ApolloProvider>
   );

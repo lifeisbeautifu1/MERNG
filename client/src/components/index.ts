@@ -9,3 +9,4 @@ export { default as EditProjectForm } from './EditProjectForm';
 export { default as DeleteProjectButton } from './DeleteProjectButton';
 export { default as AddClientModal } from './AddClientModal';
 export { default as AddProjectModal } from './AddProjectModal';
+export { default as SharedLayout } from './SharedLayout';
