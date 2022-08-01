@@ -1,2 +1,0 @@
-# MERNG
-MERNG Project App
