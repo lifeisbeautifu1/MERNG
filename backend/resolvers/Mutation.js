@@ -3,7 +3,7 @@ export const Mutation = {
     return await context.db.Client.create(args.input);
   },
   deleteClient: async (parent, args, context) => {
-    const projects = await context.db.Project.find({ userId: args.id });
+    const projects = await context.db.Project.find({ clientId: args.id });
     projects.forEach((project) => project.remove());
     return await context.db.Client.findByIdAndDelete(args.id);
   },
